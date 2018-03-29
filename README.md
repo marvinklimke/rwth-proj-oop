@@ -12,13 +12,13 @@ Folders & Files
 
 Folder / File   | Purpose
 ----------------|---------------------------------------------------
-`backend`       | the backend-project (crc, ecc, mod, channel)
-`frontend`      | the frontend-project (gui)
-`ipc-backend`   | dummy backend-project to develop the dbus-ipc
-`ipc-frontend`  | dummy frontend-project to develop the dbus-ipc
-`shared`        | shared files for backend and frontend (dbus-ipc)
+`backend`       | The backend-project (crc, ecc, mod, channel)
+`frontend`      | The frontend-project (gui)
+`ipc-backend`   | Dummy backend-project to develop the dbus-ipc
+`ipc-frontend`  | Dummy frontend-project to develop the dbus-ipc
+`shared`        | Shared files for backend and frontend (dbus-ipc)
 `Doxyfile`      | Doxygen config file (output in ../oop-doc)
-`README.md`     | this file
+`README.md`     | This file
 
 
 Team (oop-team-2)

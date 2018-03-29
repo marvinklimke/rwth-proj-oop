@@ -1,0 +1,36 @@
+<!DOCTYPE node PUBLIC "-//freedesktop//DTD D-BUS Object Introspection 1.0//EN" "http://www.freedesktop.org/standards/dbus/1.0/introspect.dtd">
+<node>
+  <interface name="de.rwth.iss.oop">
+    <signal name="sendPixelRow">
+      <arg name="row" type="i" direction="out"/>
+      <arg name="pixelrow" type="ab" direction="out"/>
+      <annotation name="org.qtproject.QtDBus.QtTypeName.Out1" value="QList&lt;bool&gt;"/>
+    </signal>
+    <signal name="receivePixelRow">
+      <arg name="row" type="i" direction="out"/>
+      <arg name="pixelrow" type="ab" direction="out"/>
+      <annotation name="org.qtproject.QtDBus.QtTypeName.Out1" value="QList&lt;bool&gt;"/>
+      <arg name="ber" type="d" direction="out"/>
+      <arg name="flag" type="b" direction="out"/>
+    </signal>
+    <signal name="configCRC">
+      <arg name="poly" type="ab" direction="out"/>
+      <annotation name="org.qtproject.QtDBus.QtTypeName.Out0" value="QList&lt;bool&gt;"/>
+    </signal>
+    <signal name="configECC">
+      <arg name="factor" type="i" direction="out"/>
+    </signal>
+    <signal name="configMapping">
+      <arg name="map" type="i" direction="out"/>
+    </signal>
+    <signal name="configSNR">
+      <arg name="snr" type="d" direction="out"/>
+    </signal>
+    <signal name="frontendStatus">
+      <arg name="present" type="b" direction="out"/>
+    </signal>
+    <signal name="backendStatus">
+      <arg name="present" type="b" direction="out"/>
+    </signal>
+  </interface>
+</node>

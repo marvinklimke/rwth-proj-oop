@@ -1,0 +1,391 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1500</width>
+    <height>500</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Channel Simulator</string>
+  </property>
+  <widget class="QWidget" name="centralWidget">
+   <layout class="QGridLayout" name="centralWidget_content" rowstretch="0,0,0,0,0,0,0,0,1,0,0" columnstretch="0,0,0,0,1,1" rowminimumheight="0,0,0,0,0,0,0,0,0,0,0" columnminimumwidth="0,0,0,0,100,100">
+    <item row="9" column="1">
+     <widget class="QLabel" name="lblSequential">
+      <property name="text">
+       <string>Sequential value</string>
+      </property>
+      <property name="scaledContents">
+       <bool>true</bool>
+      </property>
+     </widget>
+    </item>
+    <item row="6" column="1">
+     <widget class="QLabel" name="lblCrcFlag">
+      <property name="text">
+       <string>No. CRC Errors</string>
+      </property>
+     </widget>
+    </item>
+    <item row="4" column="1">
+     <widget class="QPushButton" name="cmdLoad">
+      <property name="text">
+       <string>Load File</string>
+      </property>
+     </widget>
+    </item>
+    <item row="6" column="3">
+     <widget class="QLCDNumber" name="lcdCrcFlag">
+      <property name="minimumSize">
+       <size>
+        <width>0</width>
+        <height>32</height>
+       </size>
+      </property>
+      <property name="toolTip">
+       <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;This is the number of crc errors that occured during this session.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+      </property>
+      <property name="digitCount">
+       <number>10</number>
+      </property>
+     </widget>
+    </item>
+    <item row="5" column="3">
+     <widget class="QLCDNumber" name="lcdBer">
+      <property name="minimumSize">
+       <size>
+        <width>0</width>
+        <height>32</height>
+       </size>
+      </property>
+      <property name="contextMenuPolicy">
+       <enum>Qt::ActionsContextMenu</enum>
+      </property>
+      <property name="toolTip">
+       <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;This is the procentage of misstransmitted bits in the current session.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+      </property>
+      <property name="digitCount">
+       <number>10</number>
+      </property>
+     </widget>
+    </item>
+    <item row="3" column="1">
+     <widget class="QLabel" name="lblMapping">
+      <property name="text">
+       <string>Mapping</string>
+      </property>
+     </widget>
+    </item>
+    <item row="4" column="3">
+     <widget class="QPushButton" name="cmdStart">
+      <property name="text">
+       <string>Start </string>
+      </property>
+     </widget>
+    </item>
+    <item row="0" column="1">
+     <widget class="QLabel" name="lblCrcPoly">
+      <property name="text">
+       <string>CRC Sum</string>
+      </property>
+     </widget>
+    </item>
+    <item row="0" column="3">
+     <widget class="QComboBox" name="cbCrcPoly">
+      <property name="toolTip">
+       <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Choose the CRC polynomal you want to use.&lt;/p&gt;&lt;p&gt;It is possible to enter custom polynomals in hex-notation.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+      </property>
+      <property name="editable">
+       <bool>true</bool>
+      </property>
+      <item>
+       <property name="text">
+        <string>0x1021 (CRC-16-CCITT)</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>0x3D65 (CRC-16-DNP)</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>0x8005 (CRC-16-IBM)</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>0x1DCF (CRC-16-Profibus)</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>0x5D6DCB (CRC-24)</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>0x04C11DB7 (CRC-32)</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>0xD31 (CRC-12-GSM)</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>0x07 (CRC-8-CCITT)</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>0xA7 (CRC-8-Bluetooth)</string>
+       </property>
+      </item>
+     </widget>
+    </item>
+    <item row="5" column="1">
+     <widget class="QLabel" name="lblBer">
+      <property name="text">
+       <string>Bit Error Rate %</string>
+      </property>
+     </widget>
+    </item>
+    <item row="1" column="1">
+     <widget class="QLabel" name="lblEcc">
+      <property name="text">
+       <string>ECC Length</string>
+      </property>
+     </widget>
+    </item>
+    <item row="1" column="3">
+     <widget class="QSpinBox" name="sbEcc">
+      <property name="toolTip">
+       <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Choose the repetition factor you want the ECC-module to use.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+      </property>
+      <property name="minimum">
+       <number>1</number>
+      </property>
+      <property name="maximum">
+       <number>15</number>
+      </property>
+      <property name="singleStep">
+       <number>2</number>
+      </property>
+      <property name="value">
+       <number>3</number>
+      </property>
+     </widget>
+    </item>
+    <item row="2" column="1">
+     <widget class="QLabel" name="lblSnr">
+      <property name="text">
+       <string>SNR</string>
+      </property>
+     </widget>
+    </item>
+    <item row="10" column="1" colspan="3">
+     <widget class="QLabel" name="lblBackendStatus">
+      <property name="text">
+       <string>Backend is not present.</string>
+      </property>
+     </widget>
+    </item>
+    <item row="0" column="5" rowspan="11">
+     <widget class="QGroupBox" name="gbProcessed">
+      <property name="title">
+       <string>Processed</string>
+      </property>
+      <layout class="QGridLayout" name="gbProcessed_content">
+       <item row="0" column="0">
+        <widget class="QScrollArea" name="saProcessed">
+         <property name="widgetResizable">
+          <bool>true</bool>
+         </property>
+         <widget class="QWidget" name="saProcessed_content">
+          <property name="geometry">
+           <rect>
+            <x>0</x>
+            <y>0</y>
+            <width>544</width>
+            <height>436</height>
+           </rect>
+          </property>
+          <layout class="QGridLayout" name="saProcessed_content_2">
+           <property name="leftMargin">
+            <number>0</number>
+           </property>
+           <property name="topMargin">
+            <number>0</number>
+           </property>
+           <property name="rightMargin">
+            <number>0</number>
+           </property>
+           <property name="bottomMargin">
+            <number>0</number>
+           </property>
+           <property name="spacing">
+            <number>0</number>
+           </property>
+           <item row="0" column="0">
+            <widget class="QLabel" name="plProcessed">
+             <property name="text">
+              <string/>
+             </property>
+            </widget>
+           </item>
+          </layout>
+         </widget>
+        </widget>
+       </item>
+      </layout>
+     </widget>
+    </item>
+    <item row="8" column="1" colspan="3">
+     <spacer name="vSpace">
+      <property name="orientation">
+       <enum>Qt::Vertical</enum>
+      </property>
+      <property name="sizeHint" stdset="0">
+       <size>
+        <width>20</width>
+        <height>40</height>
+       </size>
+      </property>
+     </spacer>
+    </item>
+    <item row="0" column="4" rowspan="11">
+     <widget class="QGroupBox" name="gbOriginal">
+      <property name="title">
+       <string>Original</string>
+      </property>
+      <layout class="QGridLayout" name="gbOriginal_content">
+       <item row="0" column="0">
+        <widget class="QScrollArea" name="saOriginal">
+         <property name="widgetResizable">
+          <bool>true</bool>
+         </property>
+         <widget class="QWidget" name="saOriginal_content">
+          <property name="geometry">
+           <rect>
+            <x>0</x>
+            <y>0</y>
+            <width>545</width>
+            <height>436</height>
+           </rect>
+          </property>
+          <layout class="QGridLayout" name="saOriginal_content_2">
+           <property name="leftMargin">
+            <number>0</number>
+           </property>
+           <property name="topMargin">
+            <number>0</number>
+           </property>
+           <property name="rightMargin">
+            <number>0</number>
+           </property>
+           <property name="bottomMargin">
+            <number>0</number>
+           </property>
+           <property name="spacing">
+            <number>0</number>
+           </property>
+           <item row="0" column="0">
+            <widget class="QLabel" name="plOriginal">
+             <property name="text">
+              <string/>
+             </property>
+            </widget>
+           </item>
+          </layout>
+         </widget>
+        </widget>
+       </item>
+      </layout>
+     </widget>
+    </item>
+    <item row="9" column="2" colspan="2">
+     <widget class="QSlider" name="slSequential">
+      <property name="toolTip">
+       <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;This value determines how many packets are at the d-bus at a given time (1..15).&lt;/p&gt;&lt;p&gt;Turn it to zero (most left) to send all packets at once.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+      </property>
+      <property name="maximum">
+       <number>15</number>
+      </property>
+      <property name="pageStep">
+       <number>5</number>
+      </property>
+      <property name="value">
+       <number>5</number>
+      </property>
+      <property name="orientation">
+       <enum>Qt::Horizontal</enum>
+      </property>
+      <property name="tickPosition">
+       <enum>QSlider::TicksBothSides</enum>
+      </property>
+      <property name="tickInterval">
+       <number>1</number>
+      </property>
+     </widget>
+    </item>
+    <item row="2" column="3">
+     <widget class="QDoubleSpinBox" name="sbSNR">
+      <property name="toolTip">
+       <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Enter the desired signal-to-noise-ratio as float.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+      </property>
+      <property name="decimals">
+       <number>3</number>
+      </property>
+      <property name="maximum">
+       <double>100.000000000000000</double>
+      </property>
+      <property name="singleStep">
+       <double>0.100000000000000</double>
+      </property>
+      <property name="value">
+       <double>2.000000000000000</double>
+      </property>
+     </widget>
+    </item>
+    <item row="3" column="3">
+     <widget class="QComboBox" name="cbMapping">
+      <property name="toolTip">
+       <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Choose which type of mapping you want to use.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+      </property>
+      <property name="currentIndex">
+       <number>0</number>
+      </property>
+      <item>
+       <property name="text">
+        <string>Binary</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Graycode</string>
+       </property>
+      </item>
+     </widget>
+    </item>
+   </layout>
+  </widget>
+ </widget>
+ <layoutdefault spacing="6" margin="11"/>
+ <tabstops>
+  <tabstop>cmdLoad</tabstop>
+  <tabstop>cbCrcPoly</tabstop>
+  <tabstop>sbEcc</tabstop>
+  <tabstop>cmdStart</tabstop>
+  <tabstop>saOriginal</tabstop>
+  <tabstop>saProcessed</tabstop>
+ </tabstops>
+ <resources/>
+ <connections/>
+</ui>
