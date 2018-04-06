@@ -10,25 +10,32 @@ Communication Technologies and Embedded Systems of RWTH Aachen University.
 Folders & Files
 ---------------
 
-Folder / File   | Purpose
-----------------|---------------------------------------------------
-`backend`       | The backend-project (crc, ecc, mod, channel)
-`frontend`      | The frontend-project (gui)
-`ipc-backend`   | Dummy backend-project to develop the dbus-ipc
-`ipc-frontend`  | Dummy frontend-project to develop the dbus-ipc
-`shared`        | Shared files for backend and frontend (dbus-ipc)
-`Doxyfile`      | Doxygen config file (output in ../oop-doc)
-`README.md`     | This file
+| Folder / File   | Purpose                                           |
+|-----------------|---------------------------------------------------|
+| `backend`       | The backend-project (crc, ecc, mod, channel)      |
+| `frontend`      | The frontend-project (gui)                        |
+| `ipc-backend`   | Dummy backend-project to develop the dbus-ipc     |
+| `ipc-frontend`  | Dummy frontend-project to develop the dbus-ipc    |
+| `shared`        | Shared files for backend and frontend (dbus-ipc)  |
+| `Doxyfile`      | Doxygen config file (output in ../oop-doc)        |
+| `README.md`     | This file                                         |
 
 
-Team (oop-team-2)
+Team (oop-team2)
 -----------------
 
-I was working on this project with two fellow students.
+We were working on this project in groups of three students. Our group
+"oop-team2" consisted of Eric Hebing, Joachim Streit and me, Marvin Klimke.
+
+Reach us via
+{[eric.hebing](mailto:eric.hebing@rwth-aachen.de),
+ [joachim.streit](mailto:joachim.streit@rwth-aachen.de), 
+ [marvin.klimke](mailto:marvin.klimke@rwth-aachen.de)}@rwth-aachen.de
 
 My primary task was to prepare the inter-process communication in the projects
 `ipc-backend` and `ipc-frontend` as well as the integration into the the main
-projects `backend` and `frontend`.
+projects `backend` and `frontend`. Joachim was mainly working on the `backend`
+while Eric was making the `frontend`.
 
 
 More Information
