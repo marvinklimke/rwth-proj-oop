@@ -1,2 +1,1 @@
-Die Bearbeitung des Projektes ist abgeschlossen und der Code wird nicht mehr
-aktiv weiter entwickelt.
+This project has been completed and the code will not be developed further.
