@@ -6,7 +6,6 @@ in the bachelor's degree program Electrical Engineering, Information Technology
 and Computer Engineering (summer semester 2017) at the Institute for
 Communication Technologies and Embedded Systems of RWTH Aachen University.
 
-
 Folders & Files
 ---------------
 
@@ -19,7 +18,6 @@ Folders & Files
 | `shared`        | Shared files for backend and frontend (dbus-ipc)  |
 | `Doxyfile`      | Doxygen config file (output in ../oop-doc)        |
 | `README.md`     | This file                                         |
-
 
 Team (oop-team2)
 -----------------
@@ -36,7 +34,6 @@ My primary task was to prepare the inter-process communication in the projects
 `ipc-backend` and `ipc-frontend` as well as the integration into the the main
 projects `backend` and `frontend`. Joachim was mainly working on the `backend`
 while Eric was making the `frontend`.
-
 
 More Information
 ----------------
